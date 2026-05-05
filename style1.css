@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+}
+
+header h1 {
+    color: orange;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: orange;
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease;
+}
+
+.box h1 {
+    font-size: 40px;
+}
+
+.box p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+input {
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background: black;
+    color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}

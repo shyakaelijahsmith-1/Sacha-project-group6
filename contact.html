@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+    <h1>Sacha's Taste</h1>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="hours.html">Hours</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Order Now</a>
+    </nav>
+</header>
+
+<section class="section">
+    <div class="box">
+        <h1>Order Now</h1>
+        <p>Fast delivery available in Kigali</p>
+
+        <form onsubmit="sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+
+    <input type="text" id="order" placeholder="Your Order" required><br><br>
+
+    <input type="text" id="address" placeholder="Delivery Address" required><br><br>
+
+    <button type="submit">Place Order</button>
+      </form>
+
+        <br>
+
+        <a href="tel:+250788436863" class="call-btn">📞 Call to Order</a>
+        <br><br>
+        <a href="https://wa.me/250788436863" class="call-btn">💬 Order on WhatsApp</a>
+    </div>
+</section>
+
+<a href="tel:+250788436863" class="floating-call">📞</a>
+<a href="https://wa.me/250788436863" class="floating-whatsapp">💬</a>
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let order = document.getElementById("order").value;
+    let address = document.getElementById("address").value;
+
+    let phoneNumber = "250788436863";
+
+    let message = `🍔 *NEW ORDER* 🍔%0A%0A
+    👤 Name: ${name}%0A
+    🛒 Order: ${order}%0A
+    📍 Address: ${address}`;
+
+    let url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
