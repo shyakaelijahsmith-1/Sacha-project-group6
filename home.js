@@ -50,4 +50,24 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownContent.addEventListener('click', function() {
         dropdownContent.classList.remove('show');
     });
+
+    // Back to Top Button functionality
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
 });
+
+// Smooth scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
